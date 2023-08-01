@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import jpa.studentdata.StudentData;
-import student.dao.StudentRepo;
-import jpa.controller.StudentRepo2;
+//import student.dao.StudentRepo;
+//import jpa.controller.StudentRepo2;
 
 
 @Controller
@@ -44,7 +44,7 @@ public class StudentController {
 		
 		ModelAndView mv = new ModelAndView("viewStudent");
 		StudentData sdata = repo2.findById(sid).orElse(new StudentData());
-		mv.addObject(sdata);
+		mv.addObject("obj",sdata);
 		return mv;
 	}
 

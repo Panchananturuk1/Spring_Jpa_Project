@@ -10,7 +10,13 @@
 <h1>VIEW STUDENT PAGE</h1>
 
 	${sdata} 
-	${sdata.sid}
+	
+	ID: ${obj.sid} <br>
+	AGE: ${obj.sage} <br>
+	NAME: ${obj.sname} <br>
+	
+	 
+	${StudentData}
 	${sdata.sname}
 	
 
