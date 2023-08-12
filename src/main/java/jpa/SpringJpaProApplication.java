@@ -82,11 +82,13 @@ public class SpringJpaProApplication {
 //	users.forEach(e->{System.out.println(e);});
 	
 	
-//	List<User> allUsers = repo.getAllUser();
-//	
-//	allUsers.forEach(e->{System.out.println(e);});
+	List<User> allUsers = repo.getAllUser();
 	
-	List<User> userByName= repo.getUserByName("monu");
+	allUsers.forEach(e->{System.out.println(e);});
+	
+	System.out.println("_________________________");
+	
+	List<User> userByName= repo.getUserByName("monu","Bhubaneswar");
 	userByName.forEach(e->{System.out.println(e);});
 	
 	}
