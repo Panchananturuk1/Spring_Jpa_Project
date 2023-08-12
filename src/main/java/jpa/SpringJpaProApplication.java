@@ -13,7 +13,6 @@ import jpa.user.User;
 
 
 @SpringBootApplication
-
 public class SpringJpaProApplication {
 	
 	public static void main(String[] args) {
@@ -22,24 +21,25 @@ public class SpringJpaProApplication {
 	UserRepo repo = context.getBean(UserRepo.class);
 	
 //Create object of user1
-//	User user1 = new User();
-//	user1.setName("ROCKING");
-//	user1.setCity("SUNABEDA");
-//	user1.setStatus(".NET programmer");
+//	User user3 = new User();
+//	user3.setName("Suman");
+//	user3.setCity("Bhubaneswar");
+//	user3.setStatus("C programmer");
 
 //Create object of user1
-//	User user2 = new User();
-//	user2.setName("hero");
-//	user2.setCity("jeypore");
-//	user2.setStatus("C programmer");
+//	User user4 = new User();
+//	user4.setName("Simran");
+//	user4.setCity("Rourkela");
+//	user4.setStatus("Java programmer");
 	
 	
 	//SAVING SINGLE USER
 //User result = repo.save(user2);
 	
 	//SAVING MULTIPLE USER
-//	List<User> users = List.of(user1,user2);	
+//	List<User> users = List.of(user3,user4);	
 //	Iterable<User> result = repo.saveAll(users);
+//	result.forEach(user->{System.out.println(user);});
 //
 //	result.forEach(user->{
 //		System.out.println(user);
@@ -76,6 +76,18 @@ public class SpringJpaProApplication {
 //	alldelete.forEach(user->{System.out.println(user);});
 //	repo.deleteAll(alldelete);
 	
+	//FIND BY NAME,CITY AND ALL
+//	List<User> users = repo.findByName("ROCKING");
+//	List<User> users = repo.findByNameAndCity("monu","koraput");
+//	users.forEach(e->{System.out.println(e);});
+	
+	
+//	List<User> allUsers = repo.getAllUser();
+//	
+//	allUsers.forEach(e->{System.out.println(e);});
+	
+	List<User> userByName= repo.getUserByName("monu");
+	userByName.forEach(e->{System.out.println(e);});
 	
 	}
 
